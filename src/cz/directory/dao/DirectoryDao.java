@@ -22,7 +22,7 @@ public class DirectoryDao {
 	private static final String DELETEENTRY = "DELETE FROM register WHERE idDir =?";
 	private static final String UPDATEENTRY = "UPDATE  register SET firstname=?, surname=?, phoneNumber=? WHERE idDir=?";
 	private static final String SHOWENTRY = "SELECT * FROM register WHERE idDir=?";
-	private static final String SELECTENTRY = "SELECT * FROM register WHERE surname LIKE ? OR firstname LIKE ?  OR phoneNumber LIKE ?";
+	private static final String SELECTENTRY = "SELECT * FROM register WHERE surname LIKE ? OR firstname LIKE ?  OR phoneNumber LIKE ? ORDER BY surname, firstname DESC";
 
 	public void saveEntry(Entry newEntry) {
 		DataSource ds = getDataSource();
@@ -136,7 +136,7 @@ public class DirectoryDao {
 			stmt.setString(1, "%" + surname + "%");
 			stmt.setString(2, "%" + surname + "%");
 			stmt.setString(3, "%" + surname + "%");
-			System.out.println(stmt);
+		
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Entry ent = new Entry();
