@@ -16,18 +16,18 @@
     
     <jsp:useBean id="loadedEntry" scope="request" class="cz.directory.bean.Entry"/>
 
-		<input type="hidden" name="idDir" value="<jsp:getProperty name="loadedEntry" property="idDir"/>"/>		
+		<input type="hidden" name="idDir" value="<jsp:getProperty name="loadedEntry" property="idDir"/>">		
     <label for="firstname">Uprav jméno</label>
     <br/>
-   <input type="text" name="firstname"  class="fulltext1" value="<jsp:getProperty name="loadedEntry" property="firstname"/>">
+   <input type="text" name="firstname"  class="fulltext1" maxlength="12" value="<jsp:getProperty name="loadedEntry" property="firstname"/>" required>
       <br/>
       <label for="firstname">Uprav příjmení</label>
       <br/>
-      <input type="text" name="surname" class="fulltext1"  value="<jsp:getProperty name="loadedEntry" property="surname"/>">
+      <input type="text" name="surname" class="fulltext1" maxlength="18"  value="<jsp:getProperty name="loadedEntry" property="surname"/>" required>
       <br/>
       <label for="firstname">Uprav telefonní číslo</label>
       <br/>
-      <input type="text" name="phoneNumber" class="fulltext1"  value="<jsp:getProperty name="loadedEntry" property="phoneNumber"/>">
+      <input type="text" name="phoneNumber" class="fulltext1" maxlength="13"  value="<jsp:getProperty name="loadedEntry" property="phoneNumber"/>" required>
       <br/>
       <br/>
       <button type="submit" name="action" value="update" class="button">Upravit</button>

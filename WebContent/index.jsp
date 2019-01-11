@@ -17,7 +17,7 @@
     <button type="submit" name="action" value="writeList" class="button">Zobrazit</button>
     
      <button type="submit" name="action" value="select" class="button2">Vyhledat</button>
-     <input type="text" name="select" placeholder="hledat" value="" class="fulltext" required>
+     <input type="text" name="select" placeholder="hledat" value="" class="fulltext" >
     <br/>
     <br/>
    <br/>
