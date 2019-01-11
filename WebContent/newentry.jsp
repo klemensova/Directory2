@@ -14,15 +14,15 @@
     <form action="actionservlet" method="get">
     <label for="firstname">Zadej jméno</label>
     <br/>
-   <input type="text" name="firstname" class="fulltext1">
+   <input type="text" name="firstname" class="fulltext1" maxlength="12" required>
       <br/>
       <label for="surname">Zadej příjmení</label>
       <br/>
-      <input type="text" name="surname" class="fulltext1">
+      <input type="text" name="surname" class="fulltext1" maxlength="18" required>
       <br/>
       <label for="phoneNumber">Zadej telefonní číslo</label>
       <br/>
-      <input type="text" name="phoneNumber" class="fulltext1">
+      <input type="text" name="phoneNumber" class="fulltext1" maxlength="13" required>
       <br/>
       <br/>
       <button type="submit" name="action" value="add" class="button">Vložit</button>
