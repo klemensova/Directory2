@@ -133,9 +133,9 @@ public class DirectoryDao {
 		DataSource ds = getDataSource();
 		try (Connection con = ds.getConnection();
 				PreparedStatement stmt = con.prepareStatement(SELECTENTRY)) {
-			stmt.setString(1, "%" + surname + "%");
-			stmt.setString(2, "%" + surname + "%");
-			stmt.setString(3, "%" + surname + "%");
+			stmt.setString(1, surname + "%");
+			stmt.setString(2,  surname + "%");
+			stmt.setString(3,  surname + "%");
 		
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
